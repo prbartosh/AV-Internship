@@ -1,2 +1,1 @@
-# AV-Internship
-Symulacja Inteligentnych świateł
+Symulacja inteligentnych świateł
