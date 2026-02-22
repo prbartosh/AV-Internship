@@ -2,11 +2,12 @@ package com.avsystem.simulation.model;
 
 public enum LightState {
     RED,
-    YELLOW,
+    SHORT_YELLOW,
     GREEN,
-    GREEN_ARROW;
+    GREEN_ARROW,
+    LONG_YELLOW;
 
     public boolean allowsPassage() {
-        return this == GREEN || this == GREEN_ARROW;
+        return this == GREEN || this == GREEN_ARROW || this == LONG_YELLOW;
     }
 }

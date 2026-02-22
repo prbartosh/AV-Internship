@@ -7,14 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LightStateTest {
 
     @Test
-    void shouldAllowToPassOnGreenAndGreenArrow() {
+    void shouldAllowToPassOnGreenAndGreenArrowAndLongYellow() {
         assertTrue(LightState.GREEN.allowsPassage());
         assertTrue(LightState.GREEN_ARROW.allowsPassage());
+        assertTrue(LightState.LONG_YELLOW.allowsPassage());
     }
 
     @Test
-    void shouldNotAllowToPassOnRedAndYellow() {
+    void shouldNotAllowToPassOnRedAndShortYellow() {
         assertFalse(LightState.RED.allowsPassage());
-        assertFalse((LightState.YELLOW.allowsPassage()));
+        assertFalse((LightState.SHORT_YELLOW.allowsPassage()));
     }
 }

@@ -19,6 +19,12 @@ public class Intersection {
 
     public void setGreenLights(List<RoadDirection> greenRoads) {
         for (Map.Entry<RoadDirection, Lane> entry : lanes.entrySet()) {
+            TrafficLight light = entry.getValue().getTrafficLight();
+
+            if (light.isTransitioning()) {
+                continue;
+            }
+
             LightState state = greenRoads.contains(entry.getKey())
                     ? LightState.GREEN : LightState.RED;
             entry.getValue().getTrafficLight().setState(state);
