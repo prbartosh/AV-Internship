@@ -1,4 +1,7 @@
 package com.avsystem.simulation.model;
 
-public record Vehicle() {
-}
+public record Vehicle(
+       String vehicleID,
+       RoadDirection startRoad,
+       RoadDirection endRoad
+) {}
